@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #8e68ff;
+        background-image: url('');
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+        margin-top:3%;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // I used Two functions here.  Starter idea at: 
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    let originalImage = document.getElementById("image")
+
+
+    function upDate(previewPic) { 
+        //console.log("1")
+        var src=previewPic.getAttribute("src");
+        //console.log(src)
+        var alt=previewPic.getAttribute("alt");
+        //console.log("12")
+        document.getElementById('image').style.backgroundImage="url('"+src+"')";
+        document.getElementById('image').innerHTML=alt;
+    }   
+
+    function unDo(x) {
+        //console.log("2")
+        x = document.getElementById("image")
+        x.style.background="url('')"
+  
+        document.getElementById('image').innerHTML="Hover or tab over/into an image below to display here.";
+
+    }
+
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex="1" 
+            alt = "Chicago" 
+            src = "https://image.shutterstock.com/image-photo/reflection-chicago-buildings-mirror-bean-450w-1129809965.jpg"
+            onmouseover=upDate(this)
+            onmouseout=unDo()
+            onfocus=upDate(this)
+            onfocusout=unDo()
+            >
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" tabindex="2" 
+            alt = "New York" 
+            src = "https://image.shutterstock.com/image-photo/new-york-city-skyline-urban-450w-147954134.jpg"
+            onmouseover=upDate(this)
+            onmouseout=unDo()
+            onfocus=upDate(this)
+            onfocusout=unDo()
+            >
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "3" 
+            alt = "Atlanta"
+            src = "https://image.shutterstock.com/image-photo/atlanta-georgia-usa-downtown-skyline-450w-1031967217.jpg"
+            onmouseover=upDate(this)
+            onmouseout=unDo()
+            onfocus=upDate(this)
+            onfocusout=unDo()
+            >
+
+        <img class = "preview" tabindex = "4" 
+            alt = "San Francisco"
+            src = "https://image.shutterstock.com/image-photo/san-francisco-downtown-golden-gate-450w-238398439.jpg"
+            onmouseover=upDate(this)
+            onmouseout=unDo()
+            onfocus=upDate(this)
+            onfocusout=unDo()
+            >
+
+        <img class = "preview" tabindex = "5" 
+            alt = "Houston"
+            src = "https://image.shutterstock.com/image-photo/houston-texas-usa-downtown-city-450w-441927634.jpg"
+            onmouseover=upDate(this)
+            onmouseout=unDo()
+            onfocus=upDate(this)
+            onfocusout=unDo()
+            >
+
+        <img class = "preview" tabindex = "6" 
+            alt = "Miami"
+            src = "https://image.shutterstock.com/image-photo/miami-florida-skyline-bay-sunset-450w-428711317.jpg"
+            onmouseover=upDate(this)
+            onmouseout=unDo()
+            onfocus=upDate(this)
+            onfocusout=unDo()
+            >
+
+</body>
+</html>
+    
